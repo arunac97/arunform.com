@@ -1,15 +1,18 @@
 <html>
 <head>
 <!-- <script src="https://zps-u16-aio.csez.zohocorpin.com:8443/js/localzoho/7702facf87494784b7090b9700e4245a.js"></script> -->
-  <script>
-    document.onload = function(){
-      var ele = document.getElementById("para-div");
-      ele.onClick = function(e){
-        console.log(ele.getBoundingClientRect());
-        console.log(e)
-      }
+<script type="text/javascript">
+  window.onload = function(){
+    console.log("Loaded");
+    var myDiv = document.getElementById("para-div");
+    myDiv.onclick = function(e){
+      console.log("Click Event Data")
+      console.log(e);
+      console.log("Para Div BoundingClientRect")
+      console.log(myDiv.getBoundingClientRect());
     }
-  </script>
+  }
+</script>
 </head>
 <body>
   <h4 id = "contact-head">Contact Us Page</h4>
