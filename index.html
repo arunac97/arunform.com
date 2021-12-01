@@ -5,6 +5,24 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.pagesense.io/js/yi4uyxu7/52f434a0c3564a10890fc437ff417788.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+  function myFunction() {
+    document.getElementById("extra_div").addEventListener(onmouseover,function(){
+      console.log("Hoved true")
+    })
+    document.getElementById("extra_div").addEventListener(onmouseout,function(){
+      console.log("Hoved false")
+    })
+  }
+  function hovered(x){
+    console.log("Hovered");
+    document.getElementById("extra_div").classList.add("active");
+  }
+  function hoveredout(x){
+    console.log("Hovered out");
+    document.getElementById("extra_div").classList.remove("active");
+  }
+  </script>
 <style>
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -14,7 +32,10 @@ body {
 * {
   box-sizing: border-box;
 }
-
+.extra{
+height: 100px;
+border: 2px solid red;
+}
 /* Add padding to containers */
 .container {
   padding: 16px;
@@ -60,7 +81,9 @@ hr {
 .registerbtn:hover {
   opacity: 1;
 }
-
+.active{
+  border: 2px solid green !important;
+}
 /* Add a blue text color to links */
 a {
   color: dodgerblue;
@@ -73,7 +96,7 @@ a {
 }
 </style>
   </head>
-<body>
+<body onload="myFunction()">
 
 <form action="/action_page.php">
   <div class="container">
@@ -97,6 +120,9 @@ a {
      tablished in 1997 for member countries with less </div>
    <div id="testing" name="NoOO00"><p>one</p>three<p>two</p></div>
     <button type="submit" class="registerbtn">Register</button>
+    <div onmouseover="hovered(this)" onmouseout="hoveredout(this)" id="extra_div" class="extra">
+      HI
+    </div>
   </div>
   
 
