@@ -4,28 +4,22 @@
     <meta charset="UTF-8">
     <title>Dropdown Box Example</title>
     <script>
-      function showOptions() {
-        document.getElementById("options").style.display = "block";
-      }
-      function hideOptions() {
-        document.getElementById("options").style.display = "none";
-      }
     </script>
+<style>
+.container {
+
+  }
+</style>
   </head>
   <body>
-    <select onclick="showOptions()" onmouseout="hideOptions()">
+    <div class="container">
+    <select onclick="showOptions()">
       <option id="option1">Option 1</option>
       <option id="option2">Option 2</option>
       <option id="option3">Option 3</option>
       <option id="option4">Option 4</option>
       <option id="option5">Option 5</option>
     </select>
-    <div id="options" style="display: none;">
-      <p>Option 1</p>
-      <p>Option 2</p>
-      <p>Option 3</p>
-      <p>Option 4</p>
-      <p>Option 5</p>
     </div>
   </body>
 </html>
